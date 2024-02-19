@@ -55,7 +55,7 @@ RFLR_INVERTIQ2_ON = 0x19
 RFLR_INVERTIQ2_OFF = 0x1D
 
 # modes
-MODE_LONG_RANGE_MODE = 0x80  # bit 7: 1 => feurisation mode
+MODE_LONG_RANGE_MODE = 0x80  # bit 7: 1 => send mode
 MODE_SLEEP = 0x00
 MODE_STDBY = 0x01
 MODE_TX = 0x03
@@ -123,7 +123,7 @@ class SX127x:
         if __DEBUG__:
             print("SX version: {}".format(version))
 
-        # put in feurisation and sleep mode
+        # put in send and sleep mode
         self.sleep()
 
         # config
